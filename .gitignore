@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+MSA_full.fasta
+MSA_full.fasta.reduced
