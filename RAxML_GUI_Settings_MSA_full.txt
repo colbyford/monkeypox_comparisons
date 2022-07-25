@@ -1,0 +1,6 @@
+The analysis was run using raxmlGUI 2.0 (version 2.0.7) as follows:
+Analysis: ML + rapid bootstrap
+Binary: raxmlHPC-PTHREADS-SSE3.exe version 8.2.12
+Results saved to: C:\Users\Colby\Documents\GitHub\monkeypox_comparisons
+RAxML was called with these arguments:
+1.) -T 24 -f a -x 1337 -p 1337 -N 100 -m GTRGAMMA -O -n MSA_full.tre -s "C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta" -w "C:\Users\Colby\Documents\GitHub\monkeypox_comparisons"

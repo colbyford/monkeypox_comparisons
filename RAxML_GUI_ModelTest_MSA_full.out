@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            560
+  #sites:           197209
+  #patterns:        17815
+  Max. thread mem:  840 MB
+
+Output:
+  Log:           C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\RAxML_GUI_ModelTest_MSA_full.log
+  Starting tree: C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\RAxML_GUI_ModelTest_MSA_full.tree
+  Results:       C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\RAxML_GUI_ModelTest_MSA_full.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          24/24
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY+I+G4           6   -311410.8388    636513.3154         0.0000    0.9939
+       2  TPM2uf+I+G4        7   -311410.5761    636524.9820        11.6666    0.0029
+       3  TrN+I+G4           7   -311410.8764    636525.5825        12.2671    0.0022
+       4  TPM3uf+I+G4        7   -311412.4362    636528.7021        15.3867    0.0005
+       5  TIM1+I+G4          8   -311406.3790    636528.7798        15.4643    0.0004
+       6  TPM1uf+I+G4        7   -311413.5680    636530.9658        17.6503    0.0001
+       7  TIM2+I+G4          8   -311410.3762    636536.7741        23.4587    0.0000
+       8  TIM3+I+G4          8   -311412.0219    636540.0656        26.7502    0.0000
+       9  HKY+I              5   -311434.9506    636549.3470        36.0316    0.0000
+      10  TPM1uf+I           6   -311430.7087    636553.0551        39.7397    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY+I+G4
+lnL:                -311410.8388
+Frequencies:        0.3369 0.1647 0.1644 0.3340
+Subst. Rates:       1.0000 3.5202 1.0000 1.0000 3.5202 1.0000 
+Inv. sites prop:    0.7340
+Gamma shape:        1.0000
+Score:              636513.3154
+Weight:             0.9939
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8402
+Alpha:              0.0216
+Alpha-P.Inv:        1.0000
+P.Inv-Alpha:        0.7339
+Frequencies:        0.3369 0.1647 0.1644 0.3340 
+
+Commands:
+  > phyml  -i C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m 010010 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta --model HKY+I+G4
+  > paup -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta
+  > iqtree -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m HKY+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1+I+G4          8   -311406.3790    625062.7580         0.0000    0.8425
+       2  HKY+I+G4           6   -311410.8388    625067.6777         4.9197    0.0720
+       3  TPM2uf+I+G4        7   -311410.5761    625069.1522         6.3943    0.0344
+       4  TrN+I+G4           7   -311410.8764    625069.7527         6.9948    0.0255
+       5  TIM2+I+G4          8   -311410.3762    625070.7523         7.9943    0.0155
+       6  TPM3uf+I+G4        7   -311412.4362    625072.8724        10.1144    0.0054
+       7  TIM3+I+G4          8   -311412.0219    625074.0438        11.2858    0.0030
+       8  TPM1uf+I+G4        7   -311413.5680    625075.1360        12.3780    0.0017
+       9  TPM1uf+I           6   -311430.7087    625107.4174        44.6594    0.0000
+      10  TIM1+I             7   -311430.6270    625109.2540        46.4960    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM1+I+G4
+lnL:                -311406.3790
+Frequencies:        0.3369 0.1647 0.1643 0.3341
+Subst. Rates:       1.0000 3.3332 0.8800 0.8800 3.2793 1.0000 
+Inv. sites prop:    0.7315
+Gamma shape:        0.9775
+Score:              625062.7580
+Weight:             0.8425
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8384
+Alpha:              0.0215
+Alpha-P.Inv:        0.9799
+P.Inv-Alpha:        0.7313
+Frequencies:        0.3369 0.1647 0.1643 0.3341 
+
+Commands:
+  > phyml  -i C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m 012230 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta --model TIM1+I+G4
+  > paup -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta
+  > iqtree -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m TIM1+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1+I+G4          8   -311406.3790    625074.7580         0.0000    0.8425
+       2  HKY+I+G4           6   -311410.8388    625079.6777         4.9197    0.0720
+       3  TPM2uf+I+G4        7   -311410.5761    625081.1522         6.3943    0.0344
+       4  TrN+I+G4           7   -311410.8764    625081.7527         6.9948    0.0255
+       5  TIM2+I+G4          8   -311410.3762    625082.7523         7.9943    0.0155
+       6  TPM3uf+I+G4        7   -311412.4362    625084.8724        10.1144    0.0054
+       7  TIM3+I+G4          8   -311412.0219    625086.0438        11.2858    0.0030
+       8  TPM1uf+I+G4        7   -311413.5680    625087.1360        12.3780    0.0017
+       9  TPM1uf+I           6   -311430.7087    625119.4174        44.6594    0.0000
+      10  TIM1+I             7   -311430.6270    625121.2540        46.4960    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM1+I+G4
+lnL:                -311406.3790
+Frequencies:        0.3369 0.1647 0.1643 0.3341
+Subst. Rates:       1.0000 3.3332 0.8800 0.8800 3.2793 1.0000 
+Inv. sites prop:    0.7315
+Gamma shape:        0.9775
+Score:              625074.7580
+Weight:             0.8425
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8384
+Alpha:              0.0215
+Alpha-P.Inv:        0.9799
+P.Inv-Alpha:        0.7313
+Frequencies:        0.3369 0.1647 0.1643 0.3341 
+
+Commands:
+  > phyml  -i C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m 012230 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta --model TIM1+I+G4
+  > paup -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta
+  > iqtree -s C:\Users\Colby\Documents\GitHub\monkeypox_comparisons\MSA_full.fasta -m TIM1+I+G4
+Done
