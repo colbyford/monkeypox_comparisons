@@ -1,0 +1,5 @@
+Metastates,Degree Centrality,Indegree Centrality,Outdegree Centrality,Betweenness Centrality,Closeness Centrality,Source Hub Ratio
+California,3,0,3,0,0.333333333333333,1
+Florida,1,1,0,0,0.2,0
+New York,1,1,0,0,0.2,0
+Utah,1,1,0,0,0.2,0
