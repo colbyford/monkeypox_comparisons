@@ -6,3 +6,4 @@ Companion Repository for https://colbyford.medium.com/a-deep-dive-look-into-glob
 
 References:
 - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3901482/
+- https://www.cdc.gov/poxvirus/monkeypox/response/2022/index.html
